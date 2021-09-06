@@ -1,9 +1,9 @@
 node {
    environment{
-      def commit_id
-      def app
+       commit_id
+       app
   }
-   
+
    stage('Preparation') {
      checkout scm
      sh "git rev-parse --short HEAD > .git/commit-id"
